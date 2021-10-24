@@ -1,0 +1,72 @@
+.nav-link
+{
+color: black;
+
+}
+*{box-sizing:border-box;}
+
+		.container_icono{
+			width:95%;
+			max-width:900px;
+			padding:32px 64px;
+			margin:auto;
+		}
+
+		.social{
+			/*las imágenes usadas tienen width de 48px*/
+			width:48px;
+			position:fixed;
+			top:50px;
+			right:0;
+		}
+		.redess{
+			color: black;
+		  }
+		  
+		  a:hover{
+			color: red;
+		  }
+		  
+		  a:active{
+			color: blue;
+		  }
+
+		  
+		  .containerOwnApp {
+			box-shadow: 0 0 27px 0 rgba(84, 84, 84, 0.62);
+			padding-top: 15px;
+		 }
+		 
+		 .containerOwnApp {
+			box-shadow: 0 0 27px 0 rgba(84, 84, 84, 0.62);
+			padding-top: 15px;
+		 }
+		  
+		 .login-page {
+		   padding: 18% 0 0;
+		   margin: 0 auto 100px;
+		   max-width: 360px;
+		   position: relative;
+		 }
+		  
+		 .login-form {
+			box-shadow: 0 0 27px 0 rgba(84, 84, 84, 0.62);
+		 }
+		  
+		 .login-form-header {
+			padding-top: 16px;
+		 }
+		  
+		 .login-from-row {
+			padding-top: 16px;
+			padding-bottom: 16px;
+		 }
+		  
+		 .login-form-font-header {
+			font-size:30px; 
+			font-weight: bold;
+		 }
+		  
+		 .login-form-font-header span {
+			color: #007C9B;
+		 }

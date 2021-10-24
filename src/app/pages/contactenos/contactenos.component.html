@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitudes</title>
+</head>
+<style>
+    #link {
+        color: #FF0000;
+        text-decoration-style: solid;
+    }
+
+    /* CSS link color */
+</style>
+
+<body>
+
+    <div class="text-center bg-dark text-white ">
+        <br> SALON PARA EVENTOS S.A <br>
+        <!--Nav var responsivo-->
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/home">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Quienessomos">Quienes Somos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contactenos">Solicitudes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/Salones">Servicios</a>
+                            </li>
+                            <li class="nav-item dropdown">
+
+                                <a class="nav-link dropdown-toggle" href="/Salones" id="dropdown08"
+                                    data-bs-toggle="dropdown" aria-expanded="">Galeria</a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown08">
+                                    <li><a class="dropdown-item" href="/Cumple">Cumpleaños</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/Matri">Matrimonio</a></li>
+                                    <li><a class="dropdown-item" href="/Primeracomunion">Primera
+                                            Comunión</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/Quince">Quinceañeros</a></li>
+                                    <li><a class="dropdown-item" href="/Fiestaem">Fiesta
+                                            Empresarial</a></li>
+                                    <li><a class="dropdown-item" href="/Fiestain">Fiestas
+                                            Infantiles</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+    </div><br>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-sm-6   ">
+
+                <h5>Solicitar Un Cupo Para Un Salon De Eventos</h5>
+                <form id="miForm" autocomplete="off" class="form-group "><br><br><br>
+                    <p> <label> <strong>Tipo De Identificacion:&nbsp;&nbsp;</strong> </label>
+
+                        <input type="radio" name="identificacion" id="Cedula"> C.C&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="identificacion" id="nit">&nbsp;N.I.T&nbsp;&nbsp;&nbsp;&nbsp;<input
+                            type="radio" name="identificacion" id="Pasaporte">&nbsp;Pasaporte
+
+                    </p>
+
+
+                    <input type="text" placeholder="Digite Su Numero  De Indentificacion" class="form-control  "
+                        name="numeroID" id="Numid" onkeypress=" return solonumeros(event);" />
+
+                    <br> <label>Nombre:&nbsp;</label> <br>
+                    <input type="text" class="form-control" id="txtnom" onkeypress=" return sololetra(event);"
+                        placeholder="Digite Su Nombre"> <br>
+                    <label>Apellido</label> <br>
+                    <input type="text" class="form-control" id="txtapellido" onkeypress="  return sololetra(event);"
+                        placeholder="Digite Su Apellido"> <br>
+
+                    <label>Edad </label>
+
+                    <select id="edad">
+                        <option id="1">18-25</option>
+                        <option id="2">26-30</option>
+                        <option id="3">31-35</option>
+                        <option id="4">36-40</option>
+                        <option id="5">41-45</option>
+                        <option id="6">46-50</option>
+                        <option id="7">51-55</option>
+                        <option id="8">Mayor de 60</option>
+
+                    </select>
+                    <br> <br> <label>Presupuesto</label> <br>
+                    <input type="text" class="form-control" id="txtpresupuesto"
+                        onkeypress="  return solonumeros(event);" placeholder="Presupuesto Para El Evento">
+
+                    <br>
+                    <form action="">
+                        <label for="start">Fecha Del Evento:</label>
+                        <input type="datetime-local" id="evento" name="trip-start" value="" min="2030-12-06"
+                            max="2022-11-01">
+                        <br><br>
+
+                        <br><br><br>
+
+                        <button type="button" id="btnenviar" class="btn btn-primary" onclick="procesar()">Solicitar
+                            Cupo</button>
+                        <button type="button" id="btneditar" class="btn btn-warning" onclick="actualizarfila()">Editar
+                            Solicitud</button>
+
+                    </form>
+
+
+                </form>
+                
+            </div>
+           
+            <div  class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-6  text-center">
+                <br><br> <br><br><br><br><br>
+                <img class="rounded" height="250" width="350" src="../assets/llamanos.jpg" alt="">
+            </div>
+            <br><br>
+
+        </div>
+        <br><br>
+
+    </div>
+    <br><br>
+
+    <div class="container mt-5">
+        <div class="row">
+
+            <div class=" text-center col-lg-6 col-sm-6 col-xl-6 col-md-6 col-xs-6 col-xxl-6">
+
+                <h2 style="color: #04ebeb; text-align: center">
+                    <b>Estamos ubicados</b>
+                </h2>
+                <div>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13402.038304047137!2d-74.7997169459957!3d10.995236182425543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef42d79e57e00e7%3A0x3b195f6bb10f7ede!2sCUL%20CORPORACION%20UNIVERSITARIA%20LATINOAMERICANA!5e1!3m2!1ses-419!2sco!4v1635045614341!5m2!1ses-419!2sco"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+
+            <div style="color: black;" class=" col-lg-6 text-center">
+                <br>
+                <h5>Redes Sociales</h5>
+
+                <br>
+
+                <a style="color:rgb(0, 0, 0); " href="https://www.facebook.com/culbarranquilla"><img
+                        src="../assets/facebook.ico " width="30" height="30" alt="facebook">&nbsp; Facebook </a>
+
+                <br> <br>
+                <a id="link" style="color:rgb(0, 0, 0);"
+                    href="https://www.youtube.com/channel/UCR9VIje9rFPKu6fzZGbgNwQ"><img src="../assets/youtbe.png"
+                        width="30" height="30" alt="youtube"> &nbsp; Youtube</a>
+
+                <br> <br>
+                <a style="color:rgb(0, 0, 0);" href="https://twitter.com/culbarranquilla"><img
+                        src="../assets/twiter.png" width="30" height="30" alt="twiter">&nbsp;Twiter</a>
+
+
+                <br>
+                <br>
+                <a style="color:rgb(0, 0, 0);"
+                    href="https://www.instagram.com/culbarranquilla/?igshid=2ufzvmhphaax"><img
+                        src="../assets/instagram.png" width="30" height="30" alt="instagram">&nbsp;Instagram</a>
+
+                <br> <br>
+                <a style="color:rgb(0, 0, 0);" href=""> <img src="../assets/telefono.png" width="30" height="30"
+                        style="color:rgb(0, 0, 0);" alt="Telefono"> &nbsp;66584125</a>
+
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+    <br><br><br>
+
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+
+
+
+
+</body>
+<div class="text-center bg-dark text-white mt-2">
+    <div class="row">
+        <a class="text-white" href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">
+            <STYLE>
+                A {
+                    text-decoration: white;
+                    text-decoration-color: green;
+                }
+            </STYLE>
+            <h6>Powered by Bootstrap V.5</h6>
+        </a>
+        <div class="col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-4 col-xxl-4">
+            Derecho De Autor:
+            <br>
+            <a style="color:rgb(253, 252, 252);" href="http://eventosfestino.com/">
+                <h6>Salon de eventos S.A</h6>
+
+            </a>
+        </div>
+        <div class="col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-4 col-xxl-4">
+            Correo De Contacto:
+            <br>
+            <a style="color:rgb(245, 243, 243);" href="mailto:contacto@salondeeventossa.com">
+                <p>contacto@salondeeventossa.com<p>
+            </a>
+        </div>
+        <div class="col-lg-4 col-sm-4 col-md-4 col-xl-4 col-xs-4 col-xxl-4">
+            Pagina De Prestacion De Diseño: <br><a style="color:rgb(248, 246, 246);"
+                href="https://www.ul.edu.co/">ul.edu.co</a>
+        </div>
+    </div>
+    <br>
+
+    <br>
+    <a style="color:white;" href="http://eventosfestino.com/"> © COPYRIGHT
+        2021 ©</a>
+</div>
+
+</html>
